@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import path from 'path';
-// import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 // import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 

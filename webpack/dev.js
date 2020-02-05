@@ -17,7 +17,7 @@ const config = {
 
   plugins: [
     ...baseConfig.plugins,
-    // new webpack.HotModuleReplacementPlugin(),
+    //new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     rules: [
@@ -27,13 +27,6 @@ const config = {
         use: [{
           loader: 'babel-loader',
           query: {
-            // plugins: [
-            //   // Sem o AMD para usar widgets padrão OCC
-            //   ['@babel/plugin-transform-modules-amd'],
-            //   // ['@babel/plugin-transform-modules-commonjs', {loose: true, noInterop: true}],
-            //   ['@babel/transform-react-jsx'],
-            //   // ['@babel/plugin-proposal-class-properties']
-            // ],
             presets: ['@babel/preset-env']
           }
         }]
