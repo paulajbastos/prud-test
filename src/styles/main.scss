@@ -1,128 +1,18 @@
-/* Intended for the more generic properties and lower specificity possible.
-Resets, box-sizing */
-
-* {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	-webkit-tap-highlight-color: transparent;
-	outline: none;
-}
-
-*:before,
-*:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-body {
-    -webkit-touch-callout: none;
-    /*-webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;*/
-    padding: 0;
-    color: #333;
-    font-size: 18px;
-    font-weight: 400;
-    overflow-x: hidden;
-    height: 100%;
-    /* background: linear-gradient(90deg, $blue_dark 40%, #ffffff 40%) */
-}
-
-html,
-body {
-    height: auto;
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    color: black;
-    height: 100%;
-    min-height: 100%;
-}
-
-
-html, p, span, h1, h2, h3, h4, h5, h6, li, strong, div, a {
-    font-family: 'Open Sans', sans-serif;
-    text-rendering: optimizeLegibility !important;
-    -moz-osx-font-smoothing: grayscale;
-    //-webkit-font-smoothing: antialiased !important;
-}
-
-h1, h2, h3, h4, h5{ margin: 0; padding: 0; font-weight: 400;}
-
-a, p{ margin:0; padding:0;}
-
-section, footer{ display:block;}
-
+@import "reset";
+@import "fonts";
+@import "functions";
 
 .main {
-  width: 1440px;
+  width: 100%;
   height: 1000px;
   margin: 0 auto;
   overflow: hidden;
-}
-
-#hero {
-  position: relative;
-  height: 538px;
-  width: 1440px;
-  margin: 0 auto;
-  background-image: linear-gradient(102deg, rgba(85, 51, 255, 1), rgba(5, 213, 255, 1), rgba(166, 255, 203, 1)  );
-
-
-  .top-detail {
-    position: absolute;
-    top: -10px;
-    right: 0;
-    height: 70px;
-    width: 645px;
-    background-image: linear-gradient(169deg, rgba(0, 181, 250, 1) 35%, rgba(255, 255, 255, 0) calc(36% - 1px));
-
+  @media screen and (min-width: 1024px) {
+    width: 1440px;
+    height: 1000px;
   }
 
-  .bottom-detail {
-    position: absolute;
-    top: 360px;
-    left: -12px;
-    height: 200px;
-    width: 645px;
-    background: rgba(0, 181, 250, 1);
-    transform: rotate(-6deg) translate3d( 0, 0, 0);
-    z-index: 1;
-
-
-    &:after {
-      content: '';
-      position: absolute;
-      background: rgba(17, 189, 255, 1);
-      width: 100%;
-      height: 20px;
-      bottom: 0;
-    }
-  }
-  .page-detail {
-    position: absolute;
-    top: 170px;
-    right: 0;
-    height: 62px;
-    width: 100%;
-
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -420px;
-      left: 0px;
-      width: 101%;
-      height: 159px;
-      background: none repeat scroll 0 0 white;
-      transform: rotate(-6deg);
-
-    }
-  }
+  @import "header";
+  @import "navigation-mobile";
 
 }

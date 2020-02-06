@@ -1,13 +1,20 @@
-<div id="hero">
+<div id="header">
   <div class="top-detail"></div>
   <div class="bottom-detail"></div>
   <div class="page-detail"></div>
-  <nav>
-    <ul>
-      <li><a href="#" class="link logo"></a></li>
-      <li><a href="#" class="link logo">Sobre</a></li>
-      <li><a href="#" class="link logo">Produtos</a></li>
-      <li><a href="#" class="link logo">Contatos</a></li>
-    </ul>
-  </nav>
+
+  <div class="logo-mobile"></div>
+  <div class="bt-menu-mobile open" href="#navMobile">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="contents">
+    <nav id="nav">
+      <div ng-include="'./src/features/navigation.html'"></div>
+    </nav>
+    <div ng-include="'./src/features/hero.html'"></div>
+  </div>
+
 </div>
