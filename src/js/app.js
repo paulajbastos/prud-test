@@ -5,6 +5,10 @@ var app = angular.module('app', ['ui.swiper']);
 
 app.controller('appController',  ['$scope', function ($scope) {
 
+  $scope.cadastrar = () => {
+    console.log('cadastrar');
+  }
+
   $scope.toggleMenuMobile = () => {
     if ($scope.menuMobileclass === '') {
       $scope.menuMobileclass = 'close';

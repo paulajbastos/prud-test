@@ -33,7 +33,6 @@
       flex-direction: row;
     }
 
-
     input {
       position: relative;
       border-radius: 25px;
@@ -56,6 +55,7 @@
       }
 
       &.submit {
+        cursor: pointer;
         width: 130px;
         font-size: rem(16);
         font-weight: 700;;
@@ -82,6 +82,11 @@
         border: 1px solid red;
       }
 
+    }
+
+    input[disabled="disabled"]{
+      opacity: 0.4;
+      cursor: not-allowed;
     }
   }
 
