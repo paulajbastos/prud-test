@@ -1,0 +1,103 @@
+#cadastro {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 20px;
+  //padding-bottom: 60px;
+
+  @media screen and (min-width: 1024px) {
+    width: 769px;
+    padding: 0;
+    //padding-bottom: 60px;
+  }
+
+  .title {
+    font-size: rem(21);
+    color: rgba(68, 84, 255, 1);
+  }
+
+  .subtitle {
+    font-size: rem(14);
+    color: rgba(153, 153, 153, 1);
+    margin-bottom: 14px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+    }
+
+
+    input {
+      position: relative;
+      border-radius: 25px;
+      height: 48px;
+      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
+
+      &.email {
+        width: calc(100% - 48px);
+        font-size: rem(16);
+        font-weight: 700;;
+        color: rgba(68, 84, 255, 1);
+        padding: 0 24px;
+        background-color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 1024px) {
+          width: 570px;
+        }
+      }
+
+      &.submit {
+        width: 130px;
+        font-size: rem(16);
+        font-weight: 700;;
+        color: #FFFFFF;
+        background-color: #4ce49d;
+        border: 1px solid #4ce49d;
+        align-self: flex-end;
+
+        @media screen and (min-width: 1024px) {
+          align-self: normal;
+        }
+
+        &:hover {
+          animation: rotate 0.7s ease-in-out both;
+          span {
+            animation: storm 0.7s ease-in-out both;
+            animation-delay: 0.06s;
+          }
+        }
+      }
+
+
+      &.ng-invalid.ng-touched {
+        border: 1px solid red;
+      }
+
+    }
+  }
+
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(68, 84, 255, .4);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(68, 84, 255, .4);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(68, 84, 255, .4);
+}
+

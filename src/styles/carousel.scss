@@ -1,0 +1,109 @@
+#carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: #FAFAFA;
+
+  @media screen and (min-width: 1024px) {
+    width: 940px;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+    background-color: #FAFAFA;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: rgba(242, 242, 242, 1);
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: rgba(68, 84, 255, 1);
+  }
+
+  .person {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+
+    @media screen and (min-width: 1024px) {
+      width: 300px;
+    }
+
+    .pic {
+      width: 72px;
+      height: 72px;
+      margin-right: 20px;
+    }
+
+    .descr {
+      width: 150px;
+      text-align: left;
+
+      .name {
+        font-size: rem(18);
+        color: rgba(68, 84, 255, 1);
+      }
+
+      .func {
+        font-size: rem(11);
+        color: rgba(153, 153, 153, 1);
+      }
+    }
+
+
+  }
+
+  .testemonial {
+    width: 272px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: rem(14);
+    text-align: left;
+    color: rgba(153, 153, 153, 1);
+
+    @media screen and (min-width: 1024px) {
+      width: 575px;
+      margin-top: 0;
+    }
+
+    &:before {
+      content: "“";
+      top: 20px;
+      left: -5px;
+      margin-left: -25px;
+    }
+
+    &:after {
+      content: "”";
+
+      margin-top: 10px;
+      margin-left: 5px;
+      bottom: -31px
+    }
+    &:before,
+    &:after {
+      position: relative;
+      font-size: 48px;
+      color: rgba(68, 84, 255, 1);
+      line-height: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+
+
+  }
+
+}
+
+

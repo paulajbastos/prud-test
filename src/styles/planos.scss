@@ -5,7 +5,7 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  margin-top: 265px;
+  margin-top: 170px;
 
 
   @media screen and (min-width: 1024px) {
@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 940px;
-    margin-top: 155px;
+    margin-top: 55px;
     padding: 0;
 
   }
@@ -30,8 +30,17 @@
     will-change: transform;
     transform: scaleY(1);
     margin-bottom: 16px;
+    background-color: #FFFFFF;
+
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      .bg {
+        transform: scaleY(1.1);
+        height: 263px;
+      }
     }
 
     @media screen and (min-width: 1024px) {
@@ -44,16 +53,12 @@
       left: 0;
       width: 100%;
       height: 100%;
+      border-radius: 25px;
 
       @media screen and (min-width: 1024px) {
         transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
         width: 300px;
         height: 236px;
-
-        &:hover {
-          transform: scaleY(1.1);
-          height: 263px;
-        }
       }
 
       &:after {
@@ -65,6 +70,7 @@
         height: 100%;
         box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
         border-radius: 25px;
+        background-color: #FFF;
       }
     }
 
@@ -75,20 +81,24 @@
       font-size: rem(28);
       color: rgba(68, 84, 255, 1);
       margin-top: 24px;
+      z-index: 1;
     }
 
     p.descr {
       font-size: rem(18);
       color: rgba(153, 153, 153, 1);
       margin-top: 8px;
+      z-index: 1;
     }
 
     .price {
       font-size: rem(24);
       color: rgba(153, 153, 153, 1);
       margin-top: 25px;
+      z-index: 1;
       span {
         font-size: rem(12);
+        padding-left: 5px;
       }
     }
 
@@ -104,6 +114,7 @@
       height: 48px;
       border-radius: 24px;
       margin-top: 22px;
+      z-index: 1;
       &:after {
         content: '';
         position: absolute;

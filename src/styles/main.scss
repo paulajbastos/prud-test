@@ -1,11 +1,13 @@
 @import "reset";
 @import "fonts";
 @import "functions";
+@import "animations";
 
 .main {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  background: #FAFAFA;
 
   @media screen and (min-width: 1024px) {
     width: 1440px;
@@ -14,6 +16,9 @@
   @import "header";
   @import "navigation-mobile";
   @import "planos";
+  @import "carousel";
+  @import "cadastro";
+  @import "footer";
 
 }
 
