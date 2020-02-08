@@ -16,6 +16,11 @@
 
   .texts {
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 600px;
+    }
+
     > h1 {
       font-size: rem(28);
       padding: 0 10px;
@@ -37,12 +42,13 @@
     .bts {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      margin: 0 auto;
+      margin-top: 39px;
+      width: 275px;
+      margin: 0;
       margin-top: 39px;
 
       @media screen and (min-width: 1024px) {
-        width: 350px;
+        width: 320px;
         margin: 0;
         margin-top: 39px;
       }
@@ -55,12 +61,20 @@
         align-items: center;
         position: relative;
         background: rgba(255, 255, 255, 1);
-        width: 132px;
         height: 48px;
         border-radius: 24px;
+        width: 112px;
+
+        &.verde {
+          width: 142px;
+        }
 
         @media screen and (min-width: 1024px) {
-          width: 162px;
+          width: 132px;
+
+          &.verde {
+            width: 162px;
+          }
 
           &:hover {
             animation: rotate 0.7s ease-in-out both;
