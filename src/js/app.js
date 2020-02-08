@@ -26,7 +26,16 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     .otherwise({ redirectTo: '/' });
 }]);
 
-app.controller('AppController', ['$scope', '$location', ($controller, $location) => {
+app.controller('AppController', ['$scope', '$location', '$document', '$window', ($controller, $location, $document, $window) => {
+
+  $document.on('scroll', function () {
+
+    if ($window.pageYOffset >= 60) {
+      $controller.mobileNavShowBg = true;
+    } else {
+      $controller.mobileNavShowBg = false;
+    }
+  })
 
   $controller.isNavActive = function (viewLocation) {
     return viewLocation === $location.path();
@@ -52,20 +61,3 @@ app.controller('AppController', ['$scope', '$location', ($controller, $location)
     $controller.menuContentsMobileclass = '';
   }
 }]);
-
-
-app.directive('scrollBg', function ($window) {
-  return function (scope, element, attrs) {
-
-    console.log('$window', $window);
-
-    // angular.element($window).bind("scroll", function () {
-    //   if (this.pageYOffset >= 60) {
-    //     scope.mobileNavShowBg = true;
-    //   } else {
-    //     scope.mobileNavShowBg = false;
-    //   }
-    //   scope.$apply();
-    // });
-  };
-});
