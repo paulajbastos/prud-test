@@ -120,6 +120,10 @@
     @media screen and (min-width: 1024px) {
       position: absolute;
       width: 545px;
+      right: -15px;
+    }
+
+    @media screen and (min-width: 1280px) {
       right: -105px;
     }
 

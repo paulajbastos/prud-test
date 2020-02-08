@@ -6,6 +6,10 @@
   background-image: linear-gradient(160deg, rgba(85,51,255,1) 0%, rgba(5,213,255,1) 48%, rgba(166,255,203,1) 100%);
 
   @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1440px) {
     height: 700px;
     width: 1440px;
     background-image: linear-gradient(100deg, rgba(85,51,255,1) 0%, rgba(5,213,255,1) 48%, rgba(166,255,203,1) 100%);;

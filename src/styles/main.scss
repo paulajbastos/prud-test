@@ -10,6 +10,10 @@
   background: #FAFAFA;
 
   @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1440px) {
     width: 1440px;
   }
 
