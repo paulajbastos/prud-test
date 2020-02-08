@@ -100,6 +100,18 @@
   @import "navigation";
   @import "hero";
 
+  .header-internas {
+    height: 300px;
+    h1 {
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: 100%;
+    }
+  }
+
 }
 
 

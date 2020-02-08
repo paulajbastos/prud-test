@@ -37,9 +37,12 @@
     }
 
     &:hover {
+
       .bg {
-        transform: scaleY(1.1);
-        height: 263px;
+        @media screen and (min-width: 1024px) {
+          transform: scaleY(1.1);
+          height: 263px;
+        }
       }
     }
 

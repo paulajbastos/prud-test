@@ -17,8 +17,37 @@
       }
 
       > a {
+        position: relative;
         color: white;
         font-size: rem(18);
+      }
+
+      &:hover {
+        > a {
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #FFFFFF;
+          }
+        }
+      }
+
+      &.active {
+        > a {
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #FFFFFF;
+          }
+        }
       }
 
       &.logo {
@@ -28,6 +57,18 @@
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: 0 0px;
+
+        > a {
+          padding: 20px 50px;
+        }
+
+        &:hover {
+          > a {
+            &:after {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

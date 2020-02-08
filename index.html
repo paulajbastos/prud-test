@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" ng-app="app" >
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Prud Test</title>
+    <meta name="description" content="Prud Test">
+    <meta name="og:title" property="og:title" content="Prud Test">
+    <meta name="robots" content="index, follow">
+
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <link rel="stylesheet" href="node_modules/angular-ui-swiper/dist/angular-ui-swiper.css">
+    <script src="node_modules/angular-ui-swiper/dist/angular-ui-swiper.js"></script>
+
+  </head>
+
+  <body>
+    <div class="main" data-scroll-bg ng-controller="AppController" >
+      <div id="header">
+        <div class="top-detail"></div>
+        <div class="bottom-detail"></div>
+        <div class="page-detail"></div>
+
+        <div id="mobileNavBg" class="only-mobi" ng-class="{active: mobileNavShowBg}"></div>
+        <div class="logo-mobile only-mobi"></div>
+        <div id="btMenuMobile" class="only-mobi" ng-class="menuMobileclass" ng-click="toggleMenuMobile()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="contents">
+          <nav id="nav">
+            <ul>
+              <li class="item logo"><a href="home" class="link" title="Home"></a></li>
+              <li class="item" ng-class="{ active: isNavActive('/sobre')}"><a href="sobre" class="link" title="Sobre">Sobre</a></li>
+              <li class="item" ng-class="{ active: isNavActive('/produtos')}"><a href="produtos" class="link"
+                  title="Produtos">Produtos</a></li>
+              <li class="item" ng-class="{ active: isNavActive('/contatos')}"><a href="contatos" class="link"
+                  title="Contatos">Contatos</a></li>
+            </ul>
+
+          </nav>
+          <div class="hero" ng-show="isNavActive('/') || isNavActive('/home')">
+            <div class="texts">
+              <h1>O novo padrão em pagamentos</h1>
+              <p class="only-mobi">A melhor plataforma de software para administrar um negócio na Internet. Lidamos com bilhões de
+                dólares todos os anos para empresas com visão de futuro em todo o mundo.</p>
+              <p class="only-desk">A melhor plataforma de software para administrar um<br /> negócio na Internet. Lidamos com
+                bilhões de dólares todos os<br />anos para empresas com visão de futuro em todo o mundo.</p>
+              <div class="bts">
+                <a href="produtos" title="Comece agora" class="bt verde">
+                  <span>Comece agora</span>
+                </a>
+                <a href="sobre" title="Saiba mais" class="bt">
+                  <span>Saiba mais</span>
+                </a>
+              </div>
+            </div>
+            <div class="image">
+              <div class="device"></div>
+              <div class="keyboard">
+                <div class="top-infos">
+                  <div class="text-credito">Crédito: R$19,90</div>
+                  <div class="text-senha">Digite a senha</div>
+                </div>
+                <div class="keys">
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                  <div class="key"></div>
+                </div>
+                <div class="keys special">
+                  <div class="key laranja"></div>
+                  <div class="key amarelo"></div>
+                  <div class="key verde"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-internas" ng-hide="isNavActive('/') || isNavActive('/home')">
+            <h1>Header Página Internas</h1>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="navigationMobile" ng-class="menuContentsMobileclass">
+        <ul>
+          <li class="item" ng-click="hideMobileNav()"><a href="home" class="link" title="Home">Home</a></li>
+          <li class="item" ng-click="hideMobileNav()" ng-class="{ active: isNavActive('/sobre')}"><a href="sobre" class="link" title="Sobre">Sobre</a></li>
+          <li class="item" ng-click="hideMobileNav()" ng-class="{ active: isNavActive('/produtos')}"><a href="produtos" class="link"
+              title="Produtos">Produtos</a></li>
+          <li class="item" ng-click="hideMobileNav()" ng-class="{ active: isNavActive('/contatos')}"><a href="contatos" class="link"
+              title="Contatos">Contatos</a></li>
+        </ul>
+      </div>
+
+      <div ng-view></div>
+
+      <div id="footer">
+        <div class="box-text">
+          <div class="logo only-mobi"></div>
+          <p>Esta interface foi projetada apenas para desafio do candidado. Não é um produto e nem uma empresa real.</p>
+        </div>
+        <div class="bg-detail"></div>
+        <div class="bottom-detail">
+          <div class="logo only-desk"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+    </script>
+
+  </body>
+</html>

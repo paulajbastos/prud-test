@@ -24,10 +24,16 @@ const config = {
       },
       sourceMap: true
     }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
     new CopyWebpackPlugin([
-      { from: path.join(__dirname, '../', 'src', 'features'), to: path.join(__dirname, '../', 'dist', 'features') },
-    ])
+      // { from: path.join(__dirname, '../', 'src', 'features'), to: path.join(__dirname, '../', 'dist', 'src', 'features') },
+      { from: path.join(__dirname, '../', 'src', 'assets'), to: path.join(__dirname, '../', 'dist', 'src', 'assets') },
+      { from: path.join(__dirname, '../', 'src', 'views'), to: path.join(__dirname, '../', 'dist', 'src', 'views') },
+      { from: path.join(__dirname, '../', 'node_modules', 'angular', 'angular.min.js'), to: path.join(__dirname, '../', 'dist', 'node_modules', 'angular') },
+      { from: path.join(__dirname, '../', 'node_modules', 'angular-route', 'angular-route.min.js'), to: path.join(__dirname, '../', 'dist', 'node_modules', 'angular-route') },
+      { from: path.join(__dirname, '../', 'node_modules', 'angular-ui-swiper', 'dist', 'angular-ui-swiper.js'), to: path.join(__dirname, '../', 'dist', 'node_modules', 'angular-ui-swiper', 'dist') },
+      { from: path.join(__dirname, '../', 'node_modules', 'angular-ui-swiper', 'dist', 'angular-ui-swiper.css'), to: path.join(__dirname, '../', 'dist', 'node_modules', 'angular-ui-swiper', 'dist') },
+    ]),
   ],
   module: {
     rules: [
@@ -39,12 +45,18 @@ const config = {
           query: {
             presets: ['@babel/preset-env']
           }
-        }]
+        },
+      ]
       },
-      // {
-      //   test: /\.html$/i,
-      //   loader: 'html-loader',
-      // },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
+      },
       {
         test: /\.css$/,
         use: [
