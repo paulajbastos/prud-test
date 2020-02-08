@@ -6,7 +6,7 @@
   margin-top: 60px;
   background-color: #FAFAFA;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 667px) {
     width: 640px;
   }
 
@@ -22,7 +22,7 @@
     flex-direction: column;
     background-color: #FAFAFA;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 667px) {
       flex-direction: row;
     }
   }
@@ -40,7 +40,7 @@
     width: 100%;
     padding: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 667px) {
       width: 300px;
     }
 
@@ -76,7 +76,7 @@
     text-align: left;
     color: rgba(153, 153, 153, 1);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 667px) {
       width: 575px;
       margin-top: 0;
     }
@@ -103,12 +103,6 @@
       line-height: 0;
     }
   }
-
-  @media screen and (min-width: 1024px) {
-
-
-  }
-
 }
 
 
