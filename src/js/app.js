@@ -1,4 +1,10 @@
+import ngRoute from 'angular-route';
+
+import '../../node_modules/angular-ui-swiper/src/angular-ui-swiper.scss';
 import '../styles/main.scss';
+
+
+angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
 
 var app = angular.module('app', ['ngRoute', 'ui.swiper']);
 
@@ -61,3 +67,6 @@ app.controller('AppController', ['$scope', '$location', '$document', '$window', 
     $controller.menuContentsMobileclass = '';
   }
 }]);
+
+
+app.$inject = ['ngRoute', 'ui.swiper'];
