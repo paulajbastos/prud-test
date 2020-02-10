@@ -1,5 +1,6 @@
+import angular from 'angular';
 import ngRoute from 'angular-route';
-
+import swiper from 'angular-ui-swiper/dist/angular-ui-swiper.js';
 import '../../node_modules/angular-ui-swiper/src/angular-ui-swiper.scss';
 import '../styles/main.scss';
 
@@ -34,22 +35,23 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 
 app.controller('AppController', ['$scope', '$location', '$document', '$window', ($controller, $location, $document, $window) => {
 
-  $document.on('scroll', function () {
 
-    if ($window.pageYOffset >= 60) {
-      $controller.mobileNavShowBg = true;
-    } else {
-      $controller.mobileNavShowBg = false;
-    }
-  })
+  // $document.on('scroll', function () {
+
+  //   if ($window.pageYOffset >= 60) {
+  //     $controller.mobileNavShowBg = true;
+  //   } else {
+  //     $controller.mobileNavShowBg = false;
+  //   }
+  // })
 
   $controller.isNavActive = function (viewLocation) {
     return viewLocation === $location.path();
   };
 
   $controller.cadastrar = () => {
-    console.log('cadastrar');
-  }
+    console.log('cadastro feito com sucesso!');
+  };
 
   $controller.toggleMenuMobile = () => {
     if ($controller.menuMobileclass === '') {
@@ -60,12 +62,13 @@ app.controller('AppController', ['$scope', '$location', '$document', '$window', 
       $controller.menuMobileclass = '';
       $controller.menuContentsMobileclass = '';
     }
-  }
+  };
 
   $controller.hideMobileNav = () => {
     $controller.menuMobileclass = '';
     $controller.menuContentsMobileclass = '';
-  }
+  };
+
 }]);
 
 

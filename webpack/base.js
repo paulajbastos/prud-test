@@ -3,7 +3,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config = {
-  entry: ["./node_modules/angular/angular.min.js", "./node_modules/angular-ui-swiper/dist/angular-ui-swiper.js", path.join(__dirname, '../', 'src', 'js', 'app')],
+  entry: [path.join(__dirname, '../', 'src', 'js', 'app')],
 
   output: {
     path: path.join(__dirname, '../', 'dist'),

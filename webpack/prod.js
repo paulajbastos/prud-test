@@ -14,16 +14,6 @@ const config = {
         NODE_ENV: JSON.stringify('production'),
       },
     }),
-    new UglifyJsPlugin({
-      cache: true,
-      parallel: true,
-      uglifyOptions: {
-        // compress: false,
-        // ecma: 6,
-        // mangle: true
-      },
-      sourceMap: true
-    }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
     new CopyWebpackPlugin([
       // { from: path.join(__dirname, '../', 'src', 'features'), to: path.join(__dirname, '../', 'dist', 'src', 'features') },
@@ -40,7 +30,8 @@ const config = {
           compress: {
             drop_console: false,
           }
-        }
+        },
+        sourceMap: true
       }),
     ],
   },
