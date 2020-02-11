@@ -44,7 +44,7 @@ For development > Run:
 
 
 ```
-$ npm start
+$ npm run start:dev
 ```
 
 
@@ -54,10 +54,7 @@ Open
 
 
 
-```
 [http://localhost:8081](http://localhost:8081)
-```
-
 
 
 
@@ -105,9 +102,7 @@ Open
 
 
 
-```
 [http://localhost:5000](http://localhost:5000)
-```
 
 
 
@@ -117,9 +112,7 @@ Heroku Demo Prod:
 
 
 
-```
 [https://prud-test.herokuapp.com/](https://prud-test.herokuapp.com/)
-```
 
 
 
