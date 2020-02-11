@@ -37,7 +37,7 @@ $ npm install
 
 
 
-For development > Run:
+## Build for development
 
 
 
@@ -59,7 +59,7 @@ Open
 
 
 
-## Build for production > Run:
+## Build for production
 
 
 
