@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "server.js",
   "scripts": {
-    "start": "node -r @babel/register server.js --mode production",
+    "start": "npm install && npm run build && node -r @babel/register server.js --mode production",
     "start:dev": "npm run dev",
     "dev": "NODE_ENV=development node -r @babel/register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --mode development  --open --watch --colors",
     "build": "npm run clean && NODE_ENV=production node -r @babel/register ./node_modules/webpack/bin/webpack --config ./webpack/prod.js --mode production --progress --profile --colors",
