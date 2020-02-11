@@ -33,7 +33,7 @@ For development >  Run:
 
 ```
 
-$ npm start
+$ npm start:dev
 
 ```
 
@@ -44,6 +44,16 @@ To Build for production > Run:
 ```
 
 $ npm run build
+
+```
+
+To Build for Node.Js > Run:
+
+
+
+```
+
+$ npm run start
 
 ```
 
