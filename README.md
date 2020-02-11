@@ -2,7 +2,11 @@
 
 
 
+
+
 ## Dependencies
+
+
 
 
 
@@ -10,75 +14,123 @@ Must have [Nodejs](https://nodejs.org/en/) installed.
 
 
 
+
+
 You'll need to have **Node >= 10 && Node != 13.0.1** on your machine.
+
+
 
 
 Install dependencies:
 
 
 
-```
 
+
+```
 $ npm install
-
 ```
 
 
 
 
 
-For development >  Run:
 
 
+For development > Run:
 
-```
 
-$ npm run start:dev
-
-```
-
-To Build for production > Run:
 
 
 
 ```
+$ npm start
+```
 
+
+
+Open
+
+
+
+
+```
+[http://localhost:8081](http://localhost:8081)
+```
+
+
+
+
+
+## Build for production > Run:
+
+
+
+
+
+```
 $ npm run build
-
 ```
 
-To Build for production with NodeJs :
+
+
+## Build for production for Heroku  with NodeJs :
+
+
 
 
 Create an .env file and populate it with:
 
-```
 
+
+```
 NODE_ENV='production'
 PORT=5000
-
 ```
 
-> Run
+
+
+
+Simulate producation in Local:
+
+
 
 ```
-
-$ npm start
-
+$ node -r @babel/register server.js
 ```
 
-Open:
+
+
+Open
 
 
 
-http://localhost:5000
+```
+[http://localhost:5000](http://localhost:5000)
+```
+
+
+
+
+Heroku Demo Prod:
+
+
+
+
+```
+[https://prud-test.herokuapp.com/](https://prud-test.herokuapp.com/)
+```
 
 
 
 
 ## Output files
 
+
+
 Your generated files will be outputed on **/dist** folder.
+
+
 
 
 
@@ -90,13 +142,19 @@ Your generated files will be outputed on **/dist** folder.
 
 
 
+
+
 | [Paula Junqueira Bastos](https://bitbucket.org/paulajbastos/) |
 
 
 
 
 
+
+
 ## License
+
+
 
 
 
