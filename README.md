@@ -33,7 +33,7 @@ For development >  Run:
 
 ```
 
-$ npm start:dev
+$ npm run start:dev
 
 ```
 
@@ -47,13 +47,23 @@ $ npm run build
 
 ```
 
-To Build for Node.Js > Run:
+To Build for production with NodeJs :
 
 
+Create an .env file and populate it with:
 
 ```
 
-$ npm run start
+NODE_ENV='production'
+PORT=5000
+
+```
+
+> Run
+
+```
+
+$ npm start
 
 ```
 
@@ -61,7 +71,7 @@ Open:
 
 
 
-http://localhost:8081
+http://localhost:5000
 
 
 
